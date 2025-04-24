@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+body {
+  overflow-x: hidden;
+  background-color: #000714;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// gradients
+.heroGrad {
+  background: linear-gradient(0deg, rgba(0, 7, 20, 0) 0%, #000714 89.93%);
+}
+.contactGradient {
+  background: linear-gradient(180deg, #000817 0%, #060916 66.41%, #000817 100%);
+}
+
+//font
+.f24 {
+  font-size: 24px;
+}
+.f32 {
+  font-size: 32px;
+}
+.fw400 {
+  font-weight: 400;
+}
+
+.robotof {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// colors
+$black: #000714;
+$white: #fffaf3;
+$brown: #524939;
+$darkblue: #051936;
+$lightblack: #1e1e1e;
+
+.whitef {
+  color: $white;
+}
+.blackf {
+  color: $black;
+}
+.brownf {
+  color: $brown;
+}
+.darkbluef {
+  color: $darkblue;
+}
+.lightblackf {
+  color: $lightblack;
+}
+
+// layout
+.df {
+  display: flex;
+}
+.jc {
+  justify-content: center;
+}
+.je {
+  justify-content: end;
+}
+.aic {
+  align-items: center;
+}
+.aie {
+  align-items: end;
+}
+.ais {
+  align-items: start;
+}
