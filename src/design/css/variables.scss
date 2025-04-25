@@ -17,16 +17,29 @@ body {
 .contactGradient {
   background: linear-gradient(180deg, #000817 0%, #060916 66.41%, #000817 100%);
 }
+.grad3 {
+  background: linear-gradient(180deg, #f4d1b8 37.01%, #f6e8da 100%);
+  height: 77px;
+}
 
 //font
+.f18 {
+  font-size: 18px;
+}
 .f24 {
   font-size: 24px;
 }
 .f32 {
   font-size: 32px;
 }
+.f57 {
+  font-size: 57px;
+}
 .fw400 {
   font-weight: 400;
+}
+.fw500 {
+  font-weight: 500;
 }
 
 .robotof {
