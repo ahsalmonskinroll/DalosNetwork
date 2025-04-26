@@ -50,7 +50,7 @@ function App() {
             <div className="col-12 aboutUst"></div>
             <div className="col-12 about aboutbg">
               <div className="aboutsection playfair f57 whitef ">About Us</div>
-              <div className="row aboutlayout df aic ">
+              <div className="row aboutlayout df ais ">
                 <div className="col-sm-12 col-md-12 col-lg-4 df jc">
                   <div className="row">
                     <div className="col-12 df jc">
