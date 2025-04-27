@@ -51,20 +51,13 @@ function App() {
           </div>
         </div>
       </div>
+      <section id="about"></section>t
+      <div className="about-cloud" />
+      <div className="about-transition"></div>
+      <div className="aboutbg">
+        <div className="about-title playfair f57 whitef">About Us</div>
 
-      <div className="about-cloud">
-        <div className="about-transition"></div>
-        <div className="aboutbg">
-          <div className="about">
-            <div className="container h100">
-              <div className="row hinhrt">
-                <div className="col-12 ">
-                  <div className="about-wrapper">
-                    <div className="about-title playfair f57 whitef">
-                      About Us
-                    </div>
-                  </div>
-                  {/* <div className="row aboutlayout df ais ">
+        {/* <div className="row aboutlayout df ais ">
                     <div className="col-sm-12 col-md-12 col-lg-4 df jc">
                       <div className="row">
                         <div className="col-12 df jc">
@@ -109,13 +102,8 @@ function App() {
                       </div>
                     </div>
                   </div> */}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-
+      {/* </div> */}
       <div className="services">services</div>
       <div className="contact">contact</div>
       <footer>footer</footer>

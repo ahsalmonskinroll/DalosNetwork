@@ -201,28 +201,19 @@ header::before {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
-  height: 115vh;
+  aspect-ratio: 16/9;
   width: 100%;
+  position: relative;
 }
 
 .about {
   height: 100%;
 }
 
-.aboutlayout {
-  height: 57vh;
-  margin: 178px 60px;
-}
-
-.about-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 43vh;
-  height: 100%;
-}
-
 .about-title {
+  position: absolute;
+  left: 50%;
+  top: 41%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }/*# sourceMappingURL=index.css.map */
