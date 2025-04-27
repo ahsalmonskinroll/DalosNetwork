@@ -63,6 +63,7 @@ header {
   padding: 8px 16px;
 }
 
+//about
 .about-cloud {
   position: relative;
   z-index: 1;
@@ -92,6 +93,9 @@ header {
   width: 100%;
   position: relative;
 }
+.about-grad {
+  background: linear-gradient(1deg, #f5d2b9 37.01%, #f6e8da 100%);
+}
 
 .aboutbg {
   background-image: url("../assets/aboutUs/aboutbg.webp");
@@ -113,4 +117,50 @@ header {
   top: 41%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.about-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.aboutlayout {
+  position: absolute;
+  top: 63%;
+}
+
+.icon-wrapper {
+  height: 100px;
+  width: auto;
+  &img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.about-bottom {
+  background-image: url("../assets/aboutUs/about-bottom.png");
+  height: 77px;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//services
+.services-ust {
+  background-image: url("../assets/services/servicesUst.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 36 /7;
+  width: 100%;
+}
+.servicesbg{
+  background-image: url("../assets/services/servicesBg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 13 /8;
+  width: 100%;
 }
