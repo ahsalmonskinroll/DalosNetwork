@@ -3,7 +3,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #000714;
+  // background-color: #000714;
 }
 
 .pointer {
@@ -97,4 +97,10 @@ $lightblack: #1e1e1e;
 }
 .ais {
   align-items: start;
+}
+.h100{
+  height: 100%;
+}
+.hinhrt{
+  height: inherit;
 }

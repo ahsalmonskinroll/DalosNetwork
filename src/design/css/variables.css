@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 body {
   overflow-x: hidden;
-  background-color: #000714;
 }
 
 .pointer {
@@ -102,4 +101,12 @@ body {
 
 .ais {
   align-items: start;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.hinhrt {
+  height: inherit;
 }/*# sourceMappingURL=variables.css.map */
