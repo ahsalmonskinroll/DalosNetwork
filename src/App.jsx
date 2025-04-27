@@ -60,52 +60,55 @@ function App() {
               <div className="row hinhrt">
                 <div className="col-12 ">
                   <div className="about-wrapper">
-                    <div className="about-title playfair f57 whitef">About Us</div>
+                    <div className="about-title playfair f57 whitef">
+                      About Us
+                    </div>
                   </div>
-                  <div className="row aboutlayout df ais ">
-              <div className="col-sm-12 col-md-12 col-lg-4 df jc">
-                <div className="row">
-                  <div className="col-12 df jc">
-                    <img src={cryptoimg} alt="" />
-                  </div>
-                  <div className="col-12 df jc f18 blackf robotof">
-                    At Dalos Network, we are dedicated to revolutionizing
-                    industries through innovative blockchain solutions. With a
-                    focus on decentralization, security, and accessibility, we
-                    transcend boundaries across various blockchain networks. Our
-                    mission is to create a more equitable and accessible digital
-                    world for all.
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-12 col-lg-4 df jc">
-                <div className="row">
-                  <div className="col-12 df jc">
-                    <img src={securityimg} alt="" />
-                  </div>
-                  <div className="col-12 df jc f18 blackf robotof">
-                    We prioritize security, privacy, and accessibility, ensuring
-                    our applications uphold the highest standards across
-                    multiple blockchain networks. Our goal is to leverage
-                    blockchain technology to its fullest potential, fostering
-                    inclusivity and empowering individuals globally.
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-12 col-lg-4 df jc">
-                <div className="row">
-                  <div className="col-12 df jc">
-                    <img src={wingsimg} alt="" />
-                  </div>
-                  <div className="col-12 df jc f18 blackf robotof">
-                    Join us at Dalos Network as we lead the charge in pioneering
-                    decentralized solutions. Together, we'll shape a future
-                    where blockchain transforms industries and creates
-                    opportunities for everyone.
-                  </div>
-                </div>
-              </div>
-            </div>
+                  {/* <div className="row aboutlayout df ais ">
+                    <div className="col-sm-12 col-md-12 col-lg-4 df jc">
+                      <div className="row">
+                        <div className="col-12 df jc">
+                          <img src={cryptoimg} alt="" />
+                        </div>
+                        <div className="col-12 df jc f18 blackf robotof">
+                          At Dalos Network, we are dedicated to revolutionizing
+                          industries through innovative blockchain solutions.
+                          With a focus on decentralization, security, and
+                          accessibility, we transcend boundaries across various
+                          blockchain networks. Our mission is to create a more
+                          equitable and accessible digital world for all.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-sm-12 col-md-12 col-lg-4 df jc">
+                      <div className="row">
+                        <div className="col-12 df jc">
+                          <img src={securityimg} alt="" />
+                        </div>
+                        <div className="col-12 df jc f18 blackf robotof">
+                          We prioritize security, privacy, and accessibility,
+                          ensuring our applications uphold the highest standards
+                          across multiple blockchain networks. Our goal is to
+                          leverage blockchain technology to its fullest
+                          potential, fostering inclusivity and empowering
+                          individuals globally.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-sm-12 col-md-12 col-lg-4 df jc">
+                      <div className="row">
+                        <div className="col-12 df jc">
+                          <img src={wingsimg} alt="" />
+                        </div>
+                        <div className="col-12 df jc f18 blackf robotof">
+                          Join us at Dalos Network as we lead the charge in
+                          pioneering decentralized solutions. Together, we'll
+                          shape a future where blockchain transforms industries
+                          and creates opportunities for everyone.
+                        </div>
+                      </div>
+                    </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -113,7 +116,6 @@ function App() {
         </div>
       </div>
 
-      
       <div className="services">services</div>
       <div className="contact">contact</div>
       <footer>footer</footer>
