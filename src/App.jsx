@@ -57,7 +57,7 @@ function App() {
         <div className="about-transition"></div>
         <div className="about-grad">
           <div className="aboutbg">
-            <div className="about-title playfair f57 whitef">About Us</div>
+            <div className="about-title">About Us</div>
             <div className="container about-wrapper df jc">
               <div className="row aboutlayout df ais">
                 <div className="col-sm-12 col-md-12 col-lg-4 df jc">
@@ -109,10 +109,57 @@ function App() {
         <div className="about-bottom" />
       </section>
       <div className="services">
-        <div className="services-ust"/>
-        <div className="servicesbg"></div>
+        <div className="services-ust" />
+        <div className="servicesbg df jc">
+          <div className="container services-cont">
+            <div className="row services-mrgn">
+              <div className="col-12 df jc mt-5">
+                <div className="playfair f57 whitef">Services</div>
+              </div>
+              <div className="col-12">
+                <div className="row df jc">
+                  <div className="col-sm-12 col-md-12 col-lg-6">
+                    <div className="row df jc gap-4">
+                      <div className="col-12 df jc">
+                        <div className="whitef f38 playfair">Software</div>
+                      </div>
+                      <div className="col">
+                        <div className="whitef f18 robotof">
+                          Dalos Network specializes in developing decentralized
+                          solutions and applications across various blockchains,
+                          with a particular focus on EVM-based networks.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-12 col-md-12 col-lg-6">
+                    <div className="row df jc gap-4">
+                      <div className="col-12 df jc">
+                        <div className="whitef f38 playfair">Consultancy</div>
+                      </div>
+                      <div className="col">
+                        <div className="whitef f18 robotof">
+                          Consultancy: As a trusted advisor, Dalos Network
+                          offers consultancy services to support the
+                          implementation of your blockchain-oriented technical
+                          and business processes.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="contact">contact</div>
+      <div className="contact">
+        <div className="contact-bg df aic">
+          <div className="container">
+            <div className="contact-form"></div>
+          </div>
+        </div>
+      </div>
       <footer>footer</footer>
     </>
   );

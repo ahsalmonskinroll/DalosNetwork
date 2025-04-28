@@ -4,6 +4,16 @@ body {
   overflow-x: hidden;
 }
 
+::-moz-selection {
+  background-color: #CAEBFE;
+  color: #051936;
+}
+
+::selection {
+  background-color: #CAEBFE;
+  color: #051936;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -31,6 +41,10 @@ body {
 
 .f32 {
   font-size: 32px;
+}
+
+.f38 {
+  font-size: 38px;
 }
 
 .f57 {

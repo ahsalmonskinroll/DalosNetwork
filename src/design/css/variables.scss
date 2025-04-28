@@ -6,6 +6,11 @@ body {
   // background-color: #000714;
 }
 
+::selection{
+  background-color: #CAEBFE;
+  color: #051936;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -31,6 +36,9 @@ body {
 }
 .f32 {
   font-size: 32px;
+}
+.f38 {
+  font-size: 38px;
 }
 .f57 {
   font-size: 57px;
@@ -98,9 +106,9 @@ $lightblack: #1e1e1e;
 .ais {
   align-items: start;
 }
-.h100{
+.h100 {
   height: 100%;
 }
-.hinhrt{
+.hinhrt {
   height: inherit;
 }

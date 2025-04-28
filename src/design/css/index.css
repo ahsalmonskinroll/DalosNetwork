@@ -4,6 +4,16 @@ body {
   overflow-x: hidden;
 }
 
+::-moz-selection {
+  background-color: #CAEBFE;
+  color: #051936;
+}
+
+::selection {
+  background-color: #CAEBFE;
+  color: #051936;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -31,6 +41,10 @@ body {
 
 .f32 {
   font-size: 32px;
+}
+
+.f38 {
+  font-size: 38px;
 }
 
 .f57 {
@@ -220,6 +234,11 @@ header::before {
   top: 41%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 57px;
+  color: #fffaf3;
 }
 
 .about-wrapper {
@@ -266,4 +285,50 @@ header::before {
   background-size: cover;
   aspect-ratio: 13/8;
   width: 100%;
+  position: relative;
+}
+
+.services-cont {
+  position: absolute;
+  height: 100%;
+}
+
+.services-mrgn {
+  margin: 0px 250px;
+  gap: 90px;
+}
+
+.contact {
+  background-color: #070a18;
+}
+
+.contact-bg {
+  background-image: url("../assets/contact/contactGorup.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 16/11;
+  width: 100%;
+  background-position: top;
+  position: relative;
+  z-index: 0;
+}
+.contact-bg::before {
+  content: "";
+  background: linear-gradient(180deg, #070a18 0%, rgba(7, 10, 23, 0), #000817 100%);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.contact-form {
+  background-image: url("../assets/contact/contactBgOrta.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  aspect-ratio: 16/13;
+  width: 100%;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  margin: 27px 0px;
 }/*# sourceMappingURL=index.css.map */
