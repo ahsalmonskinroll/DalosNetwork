@@ -331,4 +331,57 @@ header::before {
   position: relative;
   z-index: 1;
   margin: 27px 0px;
+}
+
+.contact-box {
+  position: relative;
+  background-image: url(/src/design/assets/contact/contactbox.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 77%;
+  z-index: 2;
+  margin: 415px 0px 0px 0px;
+}
+
+.contact-row {
+  width: 100%;
+}
+
+.input-border-out {
+  background: #f2feff;
+  border-radius: 41px;
+  padding: 8px;
+}
+
+.input-border-in {
+  border-radius: 41px;
+  border: 1px solid #ae803c;
+  background: #f2feff;
+  display: flex;
+  height: 28px;
+  width: 100%;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.input-border-in input {
+  position: absolute;
+  height: 83%;
+  width: 91%;
+  border: none;
+  background: #f2feff;
+}
+
+.contact-send {
+  border-radius: 31px;
+  border: 1px solid #4d4437;
+  background: linear-gradient(180deg, #fffaed -27.17%, #fffffe 29.45%, #fffcf1 67.08%, #fbe6cf 100%);
+  padding: 16px 48px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #524939;
 }/*# sourceMappingURL=index.css.map */

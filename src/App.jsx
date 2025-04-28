@@ -155,8 +155,46 @@ function App() {
       </div>
       <div className="contact">
         <div className="contact-bg df aic">
-          <div className="container">
-            <div className="contact-form"></div>
+          <div className="container df jc">
+            <div className="contact-form df jc">
+              <div className="contact-box">
+                <div className="container df jc mt-4">
+                  <div className="row contact-row df jc">
+                    <div className="col-sm-12 col-md-12 col-lg-5">
+                      <div className="input-border-out">
+                        <div className="input-border-in df jc aic">
+                          <input type="text" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-sm-12 col-md-12 col-lg-3">
+                      <div className="input-border-out">
+                        <div className="input-border-in df jc aic">
+                          <input type="text" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-sm-12 col-md-12 col-lg-4">
+                      <div className="input-border-out">
+                        <div className="input-border-in df jc aic">
+                          <input type="text" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-sm-12 col-md-12 col-lg-12 mt-3">
+                      <div className="input-border-out">
+                        <div className="input-border-in df jc aic">
+                          <input type="text" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-12 df jc mt-3">
+                      <button className="contact-send">Send</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
