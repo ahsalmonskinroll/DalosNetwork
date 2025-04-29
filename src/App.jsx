@@ -8,6 +8,22 @@ import wingsimg from "../src/design/assets/aboutUs/wings.svg";
 import servicesUstimg from "../src/design/assets/services/servicesUst.png";
 
 function App() {
+  const [form, setForm] = useState({
+    subject: "",
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", form);
+  };
+
   return (
     <>
       <div>
@@ -66,26 +82,33 @@ function App() {
                       <img src={cryptoimg} alt="" />
                     </div>
                     <div className="col-12 df jc f18 blackf robotof">
-                      At Dalos Network, we are dedicated to revolutionizing
-                      industries through innovative blockchain solutions. With a
-                      focus on decentralization, security, and accessibility, we
-                      transcend boundaries across various blockchain networks.
-                      Our mission is to create a more equitable and accessible
-                      digital world for all.
+                      <div>
+                        At Dalos Network, we are dedicated to revolutionizing
+                        industries through innovative blockchain solutions. With
+                        a focus on decentralization, security, and
+                        accessibility, we transcend boundaries across various
+                        blockchain networks. Our mission is to create a more
+                        equitable and accessible digital world for all.
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div className="col-sm-12 col-md-12 col-lg-4 df jc">
                   <div className="row df jc">
                     <div className="col-12 df jc icon-wrapper">
                       <img src={securityimg} alt="" />
                     </div>
-                    <div className="col-12 df jc f18 blackf robotof">
-                      We prioritize security, privacy, and accessibility,
-                      ensuring our applications uphold the highest standards
-                      across multiple blockchain networks. Our goal is to
-                      leverage blockchain technology to its fullest potential,
-                      fostering inclusivity and empowering individuals globally.
+                    <div class="vertical-line-up" />
+                    <div className="col-12 df jc f18 blackf robotof ">
+                      <div className="about-content">
+                        We prioritize security, privacy, and accessibility,
+                        ensuring our applications uphold the highest standards
+                        across multiple blockchain networks. Our goal is to
+                        leverage blockchain technology to its fullest potential,
+                        fostering inclusivity and empowering individuals
+                        globally.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -94,11 +117,14 @@ function App() {
                     <div className="col-12 df jc icon-wrapper">
                       <img src={wingsimg} alt="" />
                     </div>
-                    <div className="col-12 df jc f18 blackf robotof">
-                      Join us at Dalos Network as we lead the charge in
-                      pioneering decentralized solutions. Together, we'll shape
-                      a future where blockchain transforms industries and
-                      creates opportunities for everyone.
+                    <div class="vertical-line-up" />
+                    <div className="col-12 df jc f18 blackf robotof ">
+                      <div>
+                        Join us at Dalos Network as we lead the charge in
+                        pioneering decentralized solutions. Together, we'll
+                        shape a future where blockchain transforms industries
+                        and creates opportunities for everyone.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -159,37 +185,68 @@ function App() {
             <div className="contact-form df jc">
               <div className="contact-box">
                 <div className="container df jc mt-4">
-                  <div className="row contact-row df jc">
+                  <div
+                    className="row contact-row df jc"
+                    onSubmit={handleSubmit}
+                  >
                     <div className="col-sm-12 col-md-12 col-lg-5">
                       <div className="input-border-out">
                         <div className="input-border-in df jc aic">
-                          <input type="text" />
+                          <input
+                            type="text"
+                            name="subject"
+                            value={form.subject}
+                            onChange={handleChange}
+                            required
+                            placeholder="Subject"
+                          />
                         </div>
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-3">
                       <div className="input-border-out">
                         <div className="input-border-in df jc aic">
-                          <input type="text" />
+                          <input
+                            type="text"
+                            name="name"
+                            value={form.name}
+                            onChange={handleChange}
+                            required
+                            placeholder="Name Surname"
+                          />
                         </div>
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-4">
                       <div className="input-border-out">
                         <div className="input-border-in df jc aic">
-                          <input type="text" />
+                          <input
+                            type="email"
+                            name="email"
+                            value={form.email}
+                            onChange={handleChange}
+                            required
+                            placeholder="E-Mail Address"
+                          />
                         </div>
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-12 mt-3">
                       <div className="input-border-out">
-                        <div className="input-border-in df jc aic">
-                          <input type="text" />
+                        <div className="input-border-text df jc aic">
+                          <input
+                            name="message"
+                            value={form.message}
+                            onChange={handleChange}
+                            rows="10"
+                            required
+                            placeholder="Your message buraya bakılacak"
+                          />
                         </div>
                       </div>
                     </div>
                     <div className="col-12 df jc mt-3">
-                      <button className="contact-send">Send</button>
+                      <button type="submit" className="contact-send">Send</button>
                     </div>
                   </div>
                 </div>
