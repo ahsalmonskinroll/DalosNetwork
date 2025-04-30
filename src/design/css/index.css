@@ -125,6 +125,26 @@ body {
   height: inherit;
 }
 
+@media (max-width: 768px) {
+  header {
+    background-image: url("../assets/hero/mobilHeroUst.png");
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+  }
+  .web-menu {
+    display: none;
+  }
+}
+.mobile-menu-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
 .header-hero {
   position: relative;
   z-index: 1;
@@ -156,6 +176,11 @@ header::before {
   height: 417px;
   width: 100%;
   position: absolute;
+}
+@media (max-width: 768px) {
+  header::before {
+    display: none;
+  }
 }
 
 .hero-section {

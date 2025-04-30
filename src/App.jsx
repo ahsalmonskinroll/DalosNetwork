@@ -8,6 +8,7 @@ import wingsimg from "../src/design/assets/aboutUs/wings.svg";
 import servicesUstimg from "../src/design/assets/services/servicesUst.png";
 import linkedinimg from "../src/design/assets/footer/linkedin.svg";
 import twitterimg from "../src/design/assets/footer/twitter.svg";
+import hamburgerIcon from "../src/design/assets/hero/hamburgericon.svg";
 
 function App() {
   const [form, setForm] = useState({
@@ -24,6 +25,12 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", form);
+  };
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -43,13 +50,29 @@ function App() {
                     </span>
                   </div>
                 </div>
-                <div className="col-sm-6 col-md-6 col-lg-6">
-                  <div className="row df je whitef f24 robotof ">
+                <div className="col-sm-6 col-md-6 col-lg-6 df jc aic">
+                  <div className="row df je whitef f24 robotof web-menu">
                     <div className="col-auto pointer">About Us</div>
                     <div className="col-auto pointer">Services</div>
                     <div className="col-auto pointer">Contact Us</div>
                   </div>
+
+                  {/* Mobil menü ikonu */}
+                  <div
+                    className="mobile-menu-icon pointer"
+                    onClick={toggleMenu}
+                  >
+                    <img src={hamburgerIcon} alt="Menu" />
+                  </div>
                 </div>
+                {/* Mobil menü */}
+                {menuOpen && (
+                  <div className="mobile-menu">
+                    <div className="pointer">About Us</div>
+                    <div className="pointer">Services</div>
+                    <div className="pointer">Contact Us</div>
+                  </div>
+                )}
               </div>
             </div>
           </header>
@@ -261,33 +284,37 @@ function App() {
       </div>
       <footer>
         <div className="footer-bg">
-          <div className="row df jc">
-            <div className="col-12">
-              <div className="footer-logo" />
-            </div>
-            <div className="col-12">
-              <div className="footer-logo2" />
-            </div>
-            <div className="col-12 ">
-              <div className="contact-adress df aic jc">
-                <a
-                  href="https://dalosnetwork.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={linkedinimg} alt="LinkedIn" />
-                </a>
-                <a
-                  href="https://dalosnetwork.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={twitterimg} alt="Twitter" />
-                </a>
+          <div className="container">
+            <div className="row df jc">
+              <div className="col-12">
+                <div className="footer-logo" />
               </div>
-            </div>
-            <div className="col-12">
-              <div className="dalos-info f18 whitef robotof df jc">info@dalosnetwork.com</div>
+              <div className="col-12">
+                <div className="footer-logo2" />
+              </div>
+              <div className="col-12 ">
+                <div className="contact-adress df aic jc">
+                  <a
+                    href="https://dalosnetwork.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={linkedinimg} alt="LinkedIn" />
+                  </a>
+                  <a
+                    href="https://dalosnetwork.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={twitterimg} alt="Twitter" />
+                  </a>
+                </div>
+              </div>
+              <div className="col-12">
+                <div className="dalos-info f18 whitef robotof df jc">
+                  info@dalosnetwork.com
+                </div>
+              </div>
             </div>
           </div>
         </div>
