@@ -6,6 +6,8 @@ import cryptoimg from "../src/design/assets/aboutUs/Cryptocurrency.svg";
 import securityimg from "../src/design/assets/aboutUs/security.svg";
 import wingsimg from "../src/design/assets/aboutUs/wings.svg";
 import servicesUstimg from "../src/design/assets/services/servicesUst.png";
+import linkedinimg from "../src/design/assets/footer/linkedin.svg";
+import twitterimg from "../src/design/assets/footer/twitter.svg";
 
 function App() {
   const [form, setForm] = useState({
@@ -234,19 +236,21 @@ function App() {
                     <div className="col-sm-12 col-md-12 col-lg-12 mt-3">
                       <div className="input-border-out">
                         <div className="input-border-text df jc aic">
-                          <input
+                          <textarea
                             name="message"
                             value={form.message}
                             onChange={handleChange}
-                            rows="10"
+                            rows="4"
                             required
-                            placeholder="Your message buraya bakılacak"
+                            placeholder="Your message"
                           />
                         </div>
                       </div>
                     </div>
                     <div className="col-12 df jc mt-3">
-                      <button type="submit" className="contact-send">Send</button>
+                      <button type="submit" className="contact-send">
+                        Send
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -255,7 +259,39 @@ function App() {
           </div>
         </div>
       </div>
-      <footer>footer</footer>
+      <footer>
+        <div className="footer-bg">
+          <div className="row df jc">
+            <div className="col-12">
+              <div className="footer-logo" />
+            </div>
+            <div className="col-12">
+              <div className="footer-logo2" />
+            </div>
+            <div className="col-12 ">
+              <div className="contact-adress df aic jc">
+                <a
+                  href="https://dalosnetwork.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={linkedinimg} alt="LinkedIn" />
+                </a>
+                <a
+                  href="https://dalosnetwork.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={twitterimg} alt="Twitter" />
+                </a>
+              </div>
+            </div>
+            <div className="col-12">
+              <div className="dalos-info f18 whitef robotof df jc">info@dalosnetwork.com</div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
