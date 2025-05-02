@@ -6,8 +6,8 @@ body {
   // background-color: #000714;
 }
 
-::selection{
-  background-color: #CAEBFE;
+::selection {
+  background-color: #caebfe;
   color: #051936;
 }
 
@@ -36,6 +36,12 @@ body {
 }
 .f32 {
   font-size: 32px;
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 }
 .f38 {
   font-size: 38px;

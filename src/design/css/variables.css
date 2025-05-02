@@ -5,12 +5,12 @@ body {
 }
 
 ::-moz-selection {
-  background-color: #CAEBFE;
+  background-color: #caebfe;
   color: #051936;
 }
 
 ::selection {
-  background-color: #CAEBFE;
+  background-color: #caebfe;
   color: #051936;
 }
 
@@ -41,6 +41,16 @@ body {
 
 .f32 {
   font-size: 32px;
+}
+@media (max-width: 1024px) {
+  .f32 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .f32 {
+    font-size: 18px;
+  }
 }
 
 .f38 {

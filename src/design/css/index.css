@@ -5,12 +5,12 @@ body {
 }
 
 ::-moz-selection {
-  background-color: #CAEBFE;
+  background-color: #caebfe;
   color: #051936;
 }
 
 ::selection {
-  background-color: #CAEBFE;
+  background-color: #caebfe;
   color: #051936;
 }
 
@@ -41,6 +41,16 @@ body {
 
 .f32 {
   font-size: 32px;
+}
+@media (max-width: 1024px) {
+  .f32 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .f32 {
+    font-size: 18px;
+  }
 }
 
 .f38 {
@@ -126,12 +136,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  header {
-    background-image: url("../assets/hero/mobilHeroUst.png");
-    background-position: center;
-    background-size: contain;
-    height: 100%;
-  }
   .web-menu {
     display: none;
   }
@@ -142,6 +146,31 @@ body {
 @media (max-width: 768px) {
   .mobile-menu-icon {
     display: block;
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  background-color: #000714;
+  padding: 1rem;
+  gap: 1rem;
+  color: #fffaf3;
+}
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.menu {
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .menu {
+    justify-content: end;
   }
 }
 
@@ -163,6 +192,12 @@ body {
   z-index: 2;
   pointer-events: none;
 }
+@media (max-width: 768px) {
+  .header-hero::after {
+    height: 46%;
+    top: 533px;
+  }
+}
 
 header {
   z-index: 2;
@@ -179,7 +214,11 @@ header::before {
 }
 @media (max-width: 768px) {
   header::before {
-    display: none;
+    background-image: url("../assets/mobil/mblHeroUst.png");
+    background-position: left;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -190,13 +229,75 @@ header::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
   height: 100vh;
   position: relative;
   z-index: 0;
 }
+@media (max-width: 768px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+    height: 140vh;
+  }
+}
+
+.hero-bg-ust,
+.hero-bg-orta,
+.hero-bg-alt {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hero-bg-ust,
+  .hero-bg-orta,
+  .hero-bg-alt {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: block;
+  }
+}
+
+.hero-bg-ust {
+  height: 396vh;
+  background-image: url("../assets/mobil/mblHeroBgUst.png");
+}
+
+.hero-bg-orta {
+  height: 260%;
+  width: 100%;
+  top: -2px;
+  position: relative;
+  background: linear-gradient(180deg, #caebfe 16.88%, #ddfafd 63.63%, #f2fffd 83.45%, #f4fffe 92.12%, #fafffe 100%);
+}
+
+.hero-bg-alt {
+  height: 191vh;
+  top: 0px;
+  position: relative;
+  background-image: url("../assets/mobil/mblHeroBgAlt.png");
+}
 
 .hero-content {
   height: 35%;
+}
+@media (max-width: 1200px) {
+  .hero-content {
+    height: 37%;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hero-content {
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+  }
 }
 
 .btn1 {
@@ -204,6 +305,19 @@ header::before {
   border: 1px solid #4d4437;
   background: linear-gradient(180deg, #fffaed -27.17%, #fffffe 29.45%, #fffcf1 67.08%, #fbe6cf 100%);
   padding: 8px 16px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #524939;
+}
+@media (max-width: 1024px) {
+  .btn1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .btn1 {
+    font-size: 16px;
+  }
 }
 
 .about-cloud {
@@ -224,15 +338,27 @@ header::before {
   z-index: 1;
   pointer-events: none;
 }
+@media (max-width: 768px) {
+  .about-cloud::before {
+    top: -69px;
+    left: 0;
+    height: 181px;
+  }
+}
 
 .about-transition {
   background-image: url("../assets/aboutUs/aboutUst1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 135px;
+  height: 99px;
   width: 100%;
   position: relative;
+}
+@media (max-width: 768px) {
+  .about-transition {
+    height: 53px;
+  }
 }
 
 .about-grad {
@@ -265,6 +391,11 @@ header::before {
   font-size: 57px;
   color: #fffaf3;
 }
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 16px;
+  }
+}
 
 .about-wrapper {
   position: relative;
@@ -274,6 +405,14 @@ header::before {
 .aboutlayout {
   position: absolute;
   top: 63%;
+  display: flex;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .aboutlayout {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .icon-wrapper {
@@ -298,6 +437,11 @@ header::before {
   background-color: #102233;
   left: -6px;
 }
+@media (max-width: 768px) {
+  .vertical-line-up {
+    display: none;
+  }
+}
 
 .about-bottom {
   background-image: url("../assets/aboutUs/about-bottom.png");
@@ -307,6 +451,18 @@ header::before {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 1024px) {
+  .about-bottom {
+    height: 195px;
+  }
+}
+@media (max-width: 768px) {
+  .about-bottom {
+    background: linear-gradient(180deg, #f4d1b8 37.01%, #f6e8da 100%);
+    height: 100vh;
+    width: 100%;
+  }
+}
 
 .services-ust {
   background-image: url("../assets/services/servicesUst.png");
@@ -315,6 +471,11 @@ header::before {
   background-size: cover;
   aspect-ratio: 36/7;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .services-ust {
+    display: none;
+  }
 }
 
 .servicesbg {
@@ -326,6 +487,16 @@ header::before {
   width: 100%;
   position: relative;
 }
+@media (max-width: 768px) {
+  .servicesbg {
+    background-image: url("../assets/mobil/mblServicesGecis.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 13/22;
+    width: 100%;
+  }
+}
 
 .services-cont {
   position: absolute;
@@ -333,8 +504,28 @@ header::before {
 }
 
 .services-mrgn {
-  margin: 0px 250px;
+  margin: 108px 250px;
   gap: 90px;
+}
+@media (max-width: 768px) {
+  .services-mrgn {
+    margin: 337px 116px 0px 116px;
+    gap: 180px;
+  }
+}
+
+.software-text,
+.consultancy-text {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+@media (max-width: 768px) {
+  .software-text,
+  .consultancy-text {
+    text-align: center;
+    margin-top: 88px;
+  }
 }
 
 .contact {
@@ -380,6 +571,11 @@ header::before {
   width: 77%;
   z-index: 2;
   margin: 415px 0px 0px 0px;
+}
+@media (max-width: 768px) {
+  .contact-box {
+    margin: 221px 0px 0px 0px;
+  }
 }
 
 .contact-row {

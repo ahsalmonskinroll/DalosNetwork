@@ -9,6 +9,7 @@ import servicesUstimg from "../src/design/assets/services/servicesUst.png";
 import linkedinimg from "../src/design/assets/footer/linkedin.svg";
 import twitterimg from "../src/design/assets/footer/twitter.svg";
 import hamburgerIcon from "../src/design/assets/hero/hamburgericon.svg";
+import mobilSky from "../src/design/assets/mobil/mblHeroMaviGecis.png";
 
 function App() {
   const [form, setForm] = useState({
@@ -50,7 +51,7 @@ function App() {
                     </span>
                   </div>
                 </div>
-                <div className="col-sm-6 col-md-6 col-lg-6 df jc aic">
+                <div className="col-sm-6 col-md-6 col-lg-6 df menu">
                   <div className="row df je whitef f24 robotof web-menu">
                     <div className="col-auto pointer">About Us</div>
                     <div className="col-auto pointer">Services</div>
@@ -76,16 +77,19 @@ function App() {
               </div>
             </div>
           </header>
-          <div className="hero-section df jc whitef robotof brownf f32">
+          <div className="hero-section df jc ">
+            <div className="hero-bg-ust"></div>
+            <div className="hero-bg-orta"></div>
+            <div className="hero-bg-alt"></div>
             <div className="hero-content df jc">
               <div className="container">
-                <div className="row">
+                <div className="row robotof brownf f32">
                   <div className="col-12">
                     Unlocking Tomorrow, Today - Where Blockchain Meets <br />
                     <span className="df jc">Infinite Possibility</span>
                   </div>
                   <div className="col-12 mt-2">
-                    <button className="btn1 f24 fw500 brownf ">About Us</button>
+                    <button className="btn1 ">About Us</button>
                   </div>
                 </div>
               </div>
@@ -100,7 +104,7 @@ function App() {
           <div className="aboutbg">
             <div className="about-title">About Us</div>
             <div className="container about-wrapper df jc">
-              <div className="row aboutlayout df ais">
+              <div className="row aboutlayout">
                 <div className="col-sm-12 col-md-12 col-lg-4 df jc">
                   <div className="row df jc">
                     <div className="col-12 df jc icon-wrapper">
@@ -164,15 +168,15 @@ function App() {
         <div className="servicesbg df jc">
           <div className="container services-cont">
             <div className="row services-mrgn">
-              <div className="col-12 df jc mt-5">
+              <div className="col-12 df jc">
                 <div className="playfair f57 whitef">Services</div>
               </div>
               <div className="col-12">
                 <div className="row df jc">
                   <div className="col-sm-12 col-md-12 col-lg-6">
-                    <div className="row df jc gap-4">
-                      <div className="col-12 df jc">
-                        <div className="whitef f38 playfair">Software</div>
+                    <div className="row software-text">
+                      <div className="col-12">
+                        <div className="whitef f38 playfair df jc">Software</div>
                       </div>
                       <div className="col">
                         <div className="whitef f18 robotof">
@@ -184,9 +188,9 @@ function App() {
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-12 col-lg-6">
-                    <div className="row df jc gap-4">
-                      <div className="col-12 df jc">
-                        <div className="whitef f38 playfair">Consultancy</div>
+                    <div className="row consultancy-text">
+                      <div className="col-12 ">
+                        <div className="whitef f38 playfair df jc">Consultancy</div>
                       </div>
                       <div className="col">
                         <div className="whitef f18 robotof">
