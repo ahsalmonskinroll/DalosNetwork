@@ -176,7 +176,9 @@ function App() {
                   <div className="col-sm-12 col-md-12 col-lg-6">
                     <div className="row software-text">
                       <div className="col-12">
-                        <div className="whitef f38 playfair df jc">Software</div>
+                        <div className="whitef f38 playfair df jc">
+                          Software
+                        </div>
                       </div>
                       <div className="col">
                         <div className="whitef f18 robotof">
@@ -190,7 +192,9 @@ function App() {
                   <div className="col-sm-12 col-md-12 col-lg-6">
                     <div className="row consultancy-text">
                       <div className="col-12 ">
-                        <div className="whitef f38 playfair df jc">Consultancy</div>
+                        <div className="whitef f38 playfair df jc">
+                          Consultancy
+                        </div>
                       </div>
                       <div className="col">
                         <div className="whitef f18 robotof">
@@ -207,11 +211,15 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="services-alt"></div>
       </div>
       <div className="contact">
         <div className="contact-bg df aic">
           <div className="container df jc">
             <div className="contact-form df jc">
+              <div className="contact-bg-ust"></div>
+              <div className="contact-bg-orta"></div>
+              <div className="contact-bg-alt"></div>
               <div className="contact-box">
                 <div className="container df jc mt-4">
                   <div

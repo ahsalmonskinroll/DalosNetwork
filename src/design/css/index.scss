@@ -79,7 +79,7 @@ header {
       // display: none;
       background-image: url("../assets/mobil/mblHeroUst.png");
       background-position: left;
-      background-size: contain;
+      background-size: cover;
       height: 100%;
       width: 100%;
     }
@@ -187,6 +187,7 @@ header {
 .about-cloud {
   position: relative;
   z-index: 1;
+  width: 100%;
 
   &::before {
     content: "";
@@ -265,6 +266,7 @@ header {
   top: 63%;
   display: flex;
   align-items: start;
+  width: 100%;
   @media (max-width: 768px) {
     align-items: center;
     text-align: center;
@@ -279,9 +281,7 @@ header {
     width: 100%;
   }
 }
-// .about-content {
-//   border-right: 1px solid #102233;
-// }
+
 .vertical-line-up {
   position: relative;
 
@@ -346,6 +346,18 @@ header {
     width: 100%;
   }
 }
+.services-alt {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+    background-image: url("../assets/mobil/mblServicesAlt.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 12/10;
+    width: 100%;
+  }
+}
 .services-cont {
   position: absolute;
   height: 100%;
@@ -382,6 +394,7 @@ header {
   background-position: top;
   position: relative;
   z-index: 0;
+  display: block;
   &::before {
     content: "";
     background: linear-gradient(180deg, #070a18 0%, #070a1700, #000817 100%);
@@ -389,6 +402,18 @@ header {
     height: 100%;
     width: 100%;
     position: absolute;
+  }
+  @media (max-width: 768px) {
+    background-image: url("../assets/mobil/mblContactBg.png");
+    // aspect-ratio: 8 / 13;
+    // height: 1123px;
+    &::before {
+      background: radial-gradient(
+        59.64% 59.64% at 50% 50%,
+        rgba(3, 9, 23, 0) 0%,
+        #030917 100%
+      );
+    }
   }
 }
 .contact-form {
@@ -401,6 +426,43 @@ header {
   position: relative;
   z-index: 1;
   margin: 27px 0px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+    // height: 294vh;
+    margin: 75px 0px;
+  }
+}
+.contact-bg-ust,
+.contact-bg-orta,
+.contact-bg-alt {
+  display: none;
+  @media (max-width: 768px) {
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: block;
+  }
+}
+.contact-bg-ust {
+  height: 52%;
+  // aspect-ratio: 16 / 7;
+  background-image: url("../assets/mobil/mblContactFormUst.png");
+}
+.contact-bg-orta {
+  background-image: url("../assets/mobil/mblContactGecis.png");
+  height: 50vh;
+  // aspect-ratio: 16 / 7;
+  background-repeat: repeat-y;
+  background-position: top;
+}
+.contact-bg-alt {
+  height: 42vh;
+  // height: 100%;
+  // aspect-ratio: 9 / 17;
+  background-image: url("../assets/mobil/mblContactFormAlt.png");
 }
 
 .contact-box {
@@ -412,17 +474,31 @@ header {
   z-index: 2;
   margin: 415px 0px 0px 0px;
 
-  // @media (min-width: 768px) and (max-width: 1024px) {
-  //   margin: 301px 0px 0px 0px;
-  // }
-
   @media (max-width: 768px) {
-    margin: 221px 0px 0px 0px;
+    position: absolute;
+    // background-image: url(/src/design/assets/mobil/mblContactBox.png);
+    // fill: linear-gradient(
+    //   106deg,
+    //   rgba(14, 28, 43, 0.42) 41.18%,
+    //   rgba(11, 20, 32, 0.42) 90.22%
+    // );
+    backdrop-filter: blur(22.100000381469727px);
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 50%;
+    transform: translate(-48%, 7%);
+    z-index: 1;
+    width: 73%;
+    margin: 0;
+    height: 56%;
   }
 }
 
 .contact-row {
   width: 100%;
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 }
 .input-border-out {
   background: #f2feff;
@@ -514,6 +590,10 @@ header {
   background-position: top;
   position: relative;
   z-index: 0;
+  @media (max-width: 768px) {
+    background-image: url("../assets/mobil/mblFooterBg.png");
+    aspect-ratio: 16 / 33;
+  }
 }
 
 .footer-logo {
@@ -526,6 +606,10 @@ header {
   position: relative;
   z-index: 1;
   top: 30px;
+  @media (max-width: 768px) {
+    height: 242px;
+    margin-top: 125px;
+  }
 }
 .footer-logo2 {
   background-image: url("../assets/hero/dalosnetwork.svg");
@@ -537,12 +621,18 @@ header {
   position: relative;
   z-index: 1;
   top: 40px;
+  @media (max-width: 768px) {
+    height: 30px;
+  }
 }
 .contact-adress {
   position: relative;
   z-index: 1;
   top: 90px;
   gap: 12px;
+  @media (max-width: 768px) {
+    margin-top: 25px;
+  }
 }
 .dalos-info {
   font-weight: 300;

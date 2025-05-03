@@ -216,7 +216,7 @@ header::before {
   header::before {
     background-image: url("../assets/mobil/mblHeroUst.png");
     background-position: left;
-    background-size: contain;
+    background-size: cover;
     height: 100%;
     width: 100%;
   }
@@ -323,6 +323,7 @@ header::before {
 .about-cloud {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 .about-cloud::before {
   content: "";
@@ -407,6 +408,7 @@ header::before {
   top: 63%;
   display: flex;
   align-items: start;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .aboutlayout {
@@ -498,6 +500,21 @@ header::before {
   }
 }
 
+.services-alt {
+  display: none;
+}
+@media (max-width: 768px) {
+  .services-alt {
+    display: block;
+    background-image: url("../assets/mobil/mblServicesAlt.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 12/10;
+    width: 100%;
+  }
+}
+
 .services-cont {
   position: absolute;
   height: 100%;
@@ -541,6 +558,7 @@ header::before {
   background-position: top;
   position: relative;
   z-index: 0;
+  display: block;
 }
 .contact-bg::before {
   content: "";
@@ -549,6 +567,14 @@ header::before {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+@media (max-width: 768px) {
+  .contact-bg {
+    background-image: url("../assets/mobil/mblContactBg.png");
+  }
+  .contact-bg::before {
+    background: radial-gradient(59.64% 59.64% at 50% 50%, rgba(3, 9, 23, 0) 0%, #030917 100%);
+  }
 }
 
 .contact-form {
@@ -562,6 +588,48 @@ header::before {
   z-index: 1;
   margin: 27px 0px;
 }
+@media (max-width: 768px) {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+    margin: 75px 0px;
+  }
+}
+
+.contact-bg-ust,
+.contact-bg-orta,
+.contact-bg-alt {
+  display: none;
+}
+@media (max-width: 768px) {
+  .contact-bg-ust,
+  .contact-bg-orta,
+  .contact-bg-alt {
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: block;
+  }
+}
+
+.contact-bg-ust {
+  height: 52%;
+  background-image: url("../assets/mobil/mblContactFormUst.png");
+}
+
+.contact-bg-orta {
+  background-image: url("../assets/mobil/mblContactGecis.png");
+  height: 50vh;
+  background-repeat: repeat-y;
+  background-position: top;
+}
+
+.contact-bg-alt {
+  height: 42vh;
+  background-image: url("../assets/mobil/mblContactFormAlt.png");
+}
 
 .contact-box {
   position: relative;
@@ -574,12 +642,27 @@ header::before {
 }
 @media (max-width: 768px) {
   .contact-box {
-    margin: 221px 0px 0px 0px;
+    position: absolute;
+    -webkit-backdrop-filter: blur(22.1000003815px);
+            backdrop-filter: blur(22.1000003815px);
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 50%;
+    transform: translate(-48%, 7%);
+    z-index: 1;
+    width: 73%;
+    margin: 0;
+    height: 56%;
   }
 }
 
 .contact-row {
   width: 100%;
+}
+@media (max-width: 768px) {
+  .contact-row {
+    gap: 12px;
+  }
 }
 
 .input-border-out {
@@ -672,6 +755,12 @@ header::before {
   position: relative;
   z-index: 0;
 }
+@media (max-width: 768px) {
+  .footer-bg {
+    background-image: url("../assets/mobil/mblFooterBg.png");
+    aspect-ratio: 16/33;
+  }
+}
 
 .footer-logo {
   background-image: url("../assets/footer/logoRenkli.svg");
@@ -683,6 +772,12 @@ header::before {
   position: relative;
   z-index: 1;
   top: 30px;
+}
+@media (max-width: 768px) {
+  .footer-logo {
+    height: 242px;
+    margin-top: 125px;
+  }
 }
 
 .footer-logo2 {
@@ -696,12 +791,22 @@ header::before {
   z-index: 1;
   top: 40px;
 }
+@media (max-width: 768px) {
+  .footer-logo2 {
+    height: 30px;
+  }
+}
 
 .contact-adress {
   position: relative;
   z-index: 1;
   top: 90px;
   gap: 12px;
+}
+@media (max-width: 768px) {
+  .contact-adress {
+    margin-top: 25px;
+  }
 }
 
 .dalos-info {
