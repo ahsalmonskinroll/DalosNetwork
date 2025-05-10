@@ -28,6 +28,12 @@ body {
 }
 
 //font
+.f17 {
+  font-size: 17px;
+  @media (max-width: 991.98px) {
+    font-size: 15px;
+  }
+}
 .f18 {
   font-size: 18px;
 }
@@ -45,6 +51,9 @@ body {
 }
 .f38 {
   font-size: 38px;
+  @media (max-width: 991.98px) {
+    font-size: 33px;
+  }
 }
 .f57 {
   font-size: 57px;

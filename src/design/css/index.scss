@@ -1,12 +1,6 @@
 @import "./variables.scss";
 
 @media (max-width: 768px) {
-  // header {
-  //   background-image: url("../assets/mobil/mobilHeroUst.png");
-  //   background-position: center;
-  //   background-size: contain;
-  //   height: 100%;
-  // }
   .web-menu {
     display: none;
   }
@@ -16,6 +10,12 @@
 
   @media (max-width: 768px) {
     display: block;
+    height: 30px;
+    width: 30px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 .mobile-menu {
@@ -31,13 +31,48 @@
     display: none;
   }
 }
-.menu {
-  justify-content: center;
-  align-items: center;
+
+header {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: #000714;
+  &::before {
+    content: "";
+    background: linear-gradient(0deg, rgba(0, 7, 20, 0) 0%, #000714 89.93%);
+    z-index: -1; //0 yap
+    height: 417px;
+    width: 100%;
+    position: absolute;
+  }
+  &.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(0, rgba(0, 7, 20, 0) -45%, #000714 52.93%);
+    &::before {
+      background: none;
+    }
+  }
   @media (max-width: 768px) {
-    justify-content: end;
+    &::before {
+      // display: none;
+      background-image: url("../assets/mobil/mblHeroUst.png");
+      background-position: left;
+      background-size: contain;
+      height: 22vh;
+      width: 100vw;
+      bottom: 0px;
+    }
   }
 }
+header .pointer.ms-2 img {
+  @media (max-width: 370px) {
+    height: 15px;
+  }
+  @media (max-width: 324px) {
+    height: 13px;
+  }
+}
+
 .header-hero {
   position: relative;
   z-index: 1;
@@ -55,33 +90,9 @@
     background-position: center;
     z-index: 2;
     pointer-events: none; //header pointer için
+    display: block;
     @media (max-width: 768px) {
-      height: 46%;
-      top: 533px;
-    }
-  }
-}
-
-header {
-  z-index: 2;
-  position: relative;
-  background-color: #000714;
-  &::before {
-    content: "";
-    background: linear-gradient(0deg, rgba(0, 7, 20, 0) 0%, #000714 89.93%);
-    z-index: -1; //0 yap
-    height: 417px;
-    width: 100%;
-    position: absolute;
-  }
-  @media (max-width: 768px) {
-    &::before {
-      // display: none;
-      background-image: url("../assets/mobil/mblHeroUst.png");
-      background-position: left;
-      background-size: cover;
-      height: 100%;
-      width: 100%;
+      display: none;
     }
   }
 }
@@ -102,7 +113,23 @@ header {
     display: flex;
     flex-direction: column;
     background-image: none;
-    height: 140vh;
+    height: 125vh;
+    background-color: #f4fffe;
+  }
+  @media (max-width: 660px) {
+    height: 110vh;
+  }
+  @media (max-width: 560px) {
+    height: 105vh;
+  }
+  @media (max-width: 530px) {
+    height: 95vh;
+  }
+  @media (max-width: 440px) {
+    height: 85vh;
+  }
+  @media (max-width: 370px) {
+    height: 77vh;
   }
 }
 .hero-bg-ust,
@@ -110,7 +137,7 @@ header {
 .hero-bg-alt {
   display: none;
   @media (max-width: 768px) {
-    background-size: cover;
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
     width: 100%;
@@ -118,49 +145,64 @@ header {
   }
 }
 .hero-bg-ust {
-  height: 396vh;
+  height: 100%;
   background-image: url("../assets/mobil/mblHeroBgUst.png");
 }
 
 .hero-bg-orta {
-  height: 260%;
-  width: 100%;
-  top: -2px;
-  // background-image: url("../assets/mobil/mblHeroMaviGecis.png");
-  position: relative;
-  background: linear-gradient(
-    180deg,
-    #caebfe 16.88%,
-    #ddfafd 63.63%,
-    #f2fffd 83.45%,
-    #f4fffe 92.12%,
-    #fafffe 100%
-  );
+  height: 48vh;
 }
 
 .hero-bg-alt {
-  height: 191vh;
-  top: 0px;
+  height: 62vh;
+  top: 0;
   position: relative;
+  background-size: cover;
   background-image: url("../assets/mobil/mblHeroBgAlt.png");
+  &::after {
+    content: "";
+    position: absolute;
+    top: -238px;
+    left: 0;
+    width: 100%;
+    height: 69vh;
+    background-image: url("../assets/hero/herobgGroup.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    pointer-events: none;
+  }
 }
 
 .hero-content {
   height: 35%;
-  @media (max-width: 1200px) {
-    height: 37%;
-    width: 100%;
-  }
   @media (max-width: 768px) {
     position: absolute;
-    top: 71%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, 10%);
     z-index: 1;
     width: 100%;
   }
 }
-
+.hero-text {
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $brown;
+  @media (max-width: 1220px) {
+    font-size: 30px;
+  }
+  @media (max-width: 1145px) {
+    font-size: 28px;
+  }
+  @media (max-width: 1071px) {
+    font-size: 27px;
+  }
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin: 0px 39px;
+  }
+}
 .btn1 {
   border-radius: 31px;
   border: 1px solid #4d4437;
@@ -203,7 +245,7 @@ header {
     z-index: 1;
     pointer-events: none;
     @media (max-width: 768px) {
-      top: -69px;
+      top: -63px;
       left: 0;
       height: 181px;
     }
@@ -236,10 +278,6 @@ header {
   position: relative;
 }
 
-.about {
-  height: 100%;
-}
-
 .about-title {
   position: absolute;
   left: 50%;
@@ -249,11 +287,8 @@ header {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-size: 57px;
+  font-size: 4vw;
   color: $white;
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
 }
 
 .about-wrapper {
@@ -281,7 +316,14 @@ header {
     width: 100%;
   }
 }
-
+.info-text {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  color: $black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
 .vertical-line-up {
   position: relative;
 
@@ -294,6 +336,18 @@ header {
     height: 184px;
     background-color: #102233;
     left: -6px;
+
+    @media (max-width: 1385px) {
+      bottom: -208px;
+      height: 201px;
+    }
+    @media (max-width: 1200px) {
+      bottom: -209px;
+      height: 205px;
+    }
+  }
+  @media (max-width: 991.98px) {
+    display: none;
   }
   @media (max-width: 768px) {
     display: none;
@@ -307,13 +361,34 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: 1240px) {
+    height: 100px;
+  }
+  @media (max-width: 1190px) {
+    height: 115px;
+  }
+  @media (max-width: 1110px) {
+    height: 140px;
+  }
   @media (max-width: 1024px) {
     height: 195px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 991.98px) {
     background: linear-gradient(180deg, #f4d1b8 37.01%, #f6e8da 100%);
     height: 100vh;
     width: 100%;
+  }
+  @media (max-width: 500px) {
+    height: 110vh;
+  }
+  @media (max-width: 421px) {
+    height: 116vh;
+  }
+  @media (max-width: 406px) {
+    height: 125vh;
+  }
+  @media (max-width: 344px) {
+    height: 145vh;
   }
 }
 
@@ -325,6 +400,9 @@ header {
   background-size: cover;
   aspect-ratio: 36 /7;
   width: 100%;
+  @media (max-width: 991.98px) {
+    aspect-ratio: 41 / 10;
+  }
   @media (max-width: 768px) {
     display: none;
   }
@@ -333,10 +411,20 @@ header {
   background-image: url("../assets/services/servicesBg.png");
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
-  aspect-ratio: 13 /8;
+  background-size: contain;
+  aspect-ratio: 12 /8;
   width: 100%;
   position: relative;
+
+  @media (max-width: 991.98px) {
+    background-image: url(/src/design/assets/services/servicesBg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 12 / 8;
+    width: 100%;
+    position: relative;
+  }
   @media (max-width: 768px) {
     background-image: url("../assets/mobil/mblServicesGecis.png");
     background-position: top;
@@ -344,6 +432,61 @@ header {
     background-size: cover;
     aspect-ratio: 13/22;
     width: 100%;
+  }
+}
+.services-mrgn {
+  margin: 0px 285px;
+  gap: 90px;
+  position: absolute;
+  @media (max-width: 1399.98px) {
+    margin: 0px 224px;
+    gap: 62px;
+  }
+  @media (max-width: 1280px) {
+    margin: 0px 232px;
+    gap: 62px;
+    background: linear-gradient(13deg, rgb(5 7 12 / 42%), transparent);
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.86);
+    border-radius: 11px;
+  }
+  @media (max-width: 1199.98px) {
+    margin: 0px 171px;
+    gap: 22px;
+  }
+  @media (max-width: 1120px) {
+    margin: 0px 185px;
+    gap: 22px;
+    text-align: center;
+  }
+  @media (max-width: 1055px) {
+    margin: 0px 197px;
+    gap: 22px;
+  }
+  @media (max-width: 1018px) {
+    margin: 0px 208px;
+    gap: 22px;
+  }
+  @media (max-width: 991.98px) {
+    margin: 0px 136px;
+    gap: 22px;
+    top: -103px;
+  }
+  @media (max-width: 768px) {
+    margin: 337px 116px 0px 116px;
+    gap: 180px;
+  }
+}
+
+.services-text {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  @media (max-width: 991.98px) {
+    gap: 12px;
+  }
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-top: 88px;
   }
 }
 .services-alt {
@@ -356,28 +499,6 @@ header {
     background-size: cover;
     aspect-ratio: 12/10;
     width: 100%;
-  }
-}
-.services-cont {
-  position: absolute;
-  height: 100%;
-}
-.services-mrgn {
-  margin: 108px 250px;
-  gap: 90px;
-  @media (max-width: 768px) {
-    margin: 337px 116px 0px 116px;
-    gap: 180px;
-  }
-}
-.software-text,
-.consultancy-text {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  @media (max-width: 768px) {
-    text-align: center;
-    margin-top: 88px;
   }
 }
 
